@@ -10,6 +10,7 @@ import 'vuetify/dist/vuetify.min.css'
 
 loadFonts()
 
+
 // Vuetify
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
