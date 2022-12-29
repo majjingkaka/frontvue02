@@ -1,64 +1,21 @@
-<!-- <template>
-<v-app>
-  <v-navigation-drawer app>
-    <common-menu></common-menu>
-  </v-navigation-drawer>
-
-  <v-app-bar app>
-    <common-header></common-header>
-  </v-app-bar>
-  <v-main>
-    <v-container fluid>
-
-      <common-content></common-content>
-    </v-container>
-  </v-main>
-
-  <v-footer app>
-    <common-footer></common-footer>
-  </v-footer>
-</v-app>
-</template> -->
-
 <template>
-  <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" >
-      <common-menu></common-menu>
-    </v-navigation-drawer>
-
-    <v-app-bar title="doodooroom" :elevation="10">
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <common-header></common-header>
-      <!-- <v-toolbar-title>Application</v-toolbar-title> -->
-    </v-app-bar>
-
-    <v-main>
-      <common-content></common-content>
-    </v-main>
-
-    <v-footer app>
-      <common-footer></common-footer>
-    </v-footer>
-
-  </v-app>
-</template>
-
-
-
-<!-- <template>
   <div id="app">
-    <common-header></common-header>
-    <div class="wrap">
-      <common-menu></common-menu>
-      <common-content></common-content>
-    </div>
-    <common-footer></common-footer>
-  </div>
-</template> -->
+            
+            
+    <!-- <el-button>I am ElButton</el-button> -->
+    
+    <!-- <common-header></common-header> -->
+    <!-- <CommonInput></CommonInput> -->
+    <!-- <CommonList></CommonList> -->
+    <!-- <div class="wrap"> -->
+      <!-- <common-menu></common-menu> -->
+      <!-- <common-content></common-content> -->
+    <!-- </div> -->
+    <!-- <common-footer></common-footer> -->
+    
+    
+  <!-- </div> -->
 
-
-<!-- <template>
-  <div id="app">
     <div class="common-layout">
       <el-container>
         <el-aside width="20%">
@@ -67,16 +24,14 @@
         <el-container width="80%">
           <el-header><common-header></common-header></el-header>
           <el-main><common-content></common-content></el-main>
+          <!-- <el-main><router-view></router-view></el-main> -->
           <el-footer><common-footer></common-footer></el-footer>
         </el-container>
       </el-container>
     </div>
   </div>
 </template>
-   -->
-
-
-
+  
   <script>
 
 
@@ -91,16 +46,7 @@
   //보시면 ”@/components/Content" 와 같은 식으로 경로를 설정해 놓은 것을 볼 수 있습니다. 
   //@ 는 절대 경로 (src 아래) 를 가리킵니다. ./ 같은 상대 경로로 가져올 수 도 @ 같은 절대 경로로도 가져올 수 있습니다.
   
-
   export default {
-
-    data: () => ({ 
-      drawer: null
-    }),
-  //   data: () => ({
-  //   //
-  // }),
-  
   name : 'App',
   components:{
        'CommonHeader' : CommonHeader
@@ -112,10 +58,9 @@
       ,'CommonFooter' : CommonFooter
   }
   }
-  
   </script>
   
-  <style scoped>
+  <style>
   body {
   text-align: center;
   background-color: #F6F6F8;
@@ -130,8 +75,11 @@
   .shadow {
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03)
   }
-  .wrap {
+  .wrap1 {
   display: flex;
-}
+  justify-content: flex-start;
+  /* https://studiomeal.com/archives/197 */
+
+  }
   </style>
   
