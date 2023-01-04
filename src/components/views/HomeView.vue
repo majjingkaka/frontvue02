@@ -7,7 +7,7 @@
 </template> -->
 
 <template>
-  <div></div>
+  <div>HomeView</div>
 </template>
 
 <script>

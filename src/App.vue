@@ -27,8 +27,18 @@
     </v-navigation-drawer>
 
     <v-app-bar title="doodooroom" :elevation="10">
+      
+      <v-btn icon elevation="0" to="/logIn">
+        <v-icon>mdi-account</v-icon>
+      </v-btn>
+
+      <v-btn icon elevation="0" to="/memberReg">
+        <v-icon>mdi-account-cog</v-icon>
+      </v-btn>
+
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <common-header></common-header>
+      
       <!-- <v-toolbar-title>Application</v-toolbar-title> -->
     </v-app-bar>
 

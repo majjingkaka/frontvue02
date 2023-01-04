@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   outputDir:path.resolve(__dirname, "../src/main/resources/static/vue"),
-  indexPath:"../../templates/vue/index.html",
+  indexPath:"../../templates/index.html",
   publicPath: '/',
 
   devServer: {
