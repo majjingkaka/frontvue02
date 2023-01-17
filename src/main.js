@@ -45,7 +45,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import VueCookies from "vue-cookies"
 
-createApp.config.productionTip = false
+//createApp.config.productionTip = false
 
 
 const app = createApp(App)

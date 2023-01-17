@@ -51,8 +51,8 @@
  </template>
 
 <script>
-import VueCookies from 'vue-cookies'
-const cookie = VueCookies.get('XSRF-TOKEN');
+//import VueCookies from 'vue-cookies'
+//const cookie = VueCookies.get('XSRF-TOKEN');
 
 // import $ from 'jquery'
 
@@ -66,7 +66,7 @@ const cookie = VueCookies.get('XSRF-TOKEN');
 //const header = $("meta[name='_csrf_header']").attr("content");
 
 //const token = $("#_csrf").attr("value");
-console.log(cookie)
+//console.log(cookie)
 //console.log(token)
 
 // $(function () {
@@ -91,7 +91,7 @@ export default {
     loading: false,
     show1: false,
     show2: true,
-    cookie:cookie,
+    //cookie:cookie,
     rules: {
       required: value => !!value || 'Required.',
       counter: value => value.length <= 20 || 'Max 20 characters',
@@ -119,17 +119,15 @@ export default {
       onSubmit () {
         
          let saveData = {
-            auth: {
-               username: this.id, 
-               password: this.password
-            }
+            memberId: this.id, 
+            password: this.password
          };
 
          let headers = {
-            'Content-Type':'application/json',
-            'X-XSRF-TOKEN':this.cookie
+            'Content-Type':'application/json'
          };
 
+         //'X-XSRF-TOKEN':this.cookie
          //https://ssjeong.tistory.com/entry/VUE-axios-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-get-post
          //# axios는 get, post를 지원함, load에는 get을 사용해야함, res.data에 찾는 데이터들이 있음
          // const api = this.axios.create({
@@ -137,16 +135,17 @@ export default {
          // });
 
          this.axios.post(
-            '/login_proc'
+            //'/login_proc'
+            '/api/login'
             //, JSON.stringify(saveData)
             , JSON.stringify(saveData)
             //, {id: "1", email: "2", password: "3"}
-            , headers) //JSON.stringify(jsonData),
-         .then(res => {
+            , {headers}) //JSON.stringify(jsonData),
+         .then((res) => {
             //# 통신 성공
             console.log(res.data)
          })
-         .catch( error => { 
+         .catch((error) => { 
             console.log(error) 
          })
           //.finally(() => {
@@ -159,7 +158,7 @@ export default {
           //});
 
 
-        console.log(this.form);
+         console.log(this.form);
         
          if (!this.form) return
 
